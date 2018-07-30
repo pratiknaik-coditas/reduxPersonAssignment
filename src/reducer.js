@@ -11,8 +11,8 @@ export function personReducer(state=init,action){
 
         const newPerson = {
             id: Math.random(), // not really unique but good enough here!
-            name: 'Max',
-            age: Math.floor( Math.random() * 40 )
+            name: action.name,
+            age: action.age
             }
             console.log(state.persons);
             return { ...state,persons: state.persons.concat(newPerson)}
